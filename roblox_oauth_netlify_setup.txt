@@ -1,0 +1,30 @@
+AeroDex Netlify + Roblox OAuth setup
+
+1) Upload this ZIP to Netlify, or connect it to a GitHub repo.
+
+2) In Netlify, open:
+   Site configuration → Environment variables
+
+   Add these variables:
+   ROBLOX_CLIENT_ID=your Roblox OAuth client id
+   ROBLOX_CLIENT_SECRET=your Roblox OAuth client secret
+   ROBLOX_REDIRECT_URI=https://YOUR-NETLIFY-SITE.netlify.app/auth/roblox/callback
+   SESSION_SECRET=make-a-long-random-secret-here
+
+3) In Roblox Creator Dashboard OAuth app settings, add the exact redirect URI:
+   https://YOUR-NETLIFY-SITE.netlify.app/auth/roblox/callback
+
+   For local testing with Netlify CLI, add this too:
+   http://localhost:8888/auth/roblox/callback
+
+4) Required Roblox OAuth scopes:
+   openid profile
+
+5) Deploy again after adding environment variables.
+
+6) Login URL:
+   https://YOUR-NETLIFY-SITE.netlify.app/roblox-auth.html
+
+Important:
+- Do not put ROBLOX_CLIENT_SECRET in public HTML, JS, or CSS.
+- If you ever uploaded your real Client Secret anywhere public, rotate it in Roblox Creator Dashboard.

@@ -1,0 +1,19 @@
+/auth/roblox /.netlify/functions/roblox-login 200
+/auth/roblox/callback /.netlify/functions/roblox-callback 200
+/logout /.netlify/functions/logout 200
+/api/me /.netlify/functions/me 200
+/creationsandproducts.html /CreationsandProducts.html 200
+/creationandproducts.html /CreationsandProducts.html 200
+/games.html /CreationsandProducts.html 200
+/gamepass.html /Gamepass.html 200
+/store.html /Gamepass.html 200
+/login /login.html 200
+/profile /profile.html 200
+/register /register.html 200
+/checkout /checkout.html 200
+
+/sitemap.xml /sitemap.xml 200
+/robots.txt /robots.txt 200
+
+# Custom 404 page for all unmatched routes
+/* /404.html 404

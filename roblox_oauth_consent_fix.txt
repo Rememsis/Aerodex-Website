@@ -1,0 +1,13 @@
+AeroDex Roblox OAuth consent fix
+
+This build requests:
+- scope: openid profile
+- prompt: consent
+
+After deploying:
+1. Confirm openid and profile are selected in the Roblox OAuth app.
+2. Confirm ROBLOX_CLIENT_ID, ROBLOX_CLIENT_SECRET, ROBLOX_REDIRECT_URI, and SESSION_SECRET are configured in Netlify.
+3. Redeploy the site.
+4. Test /auth/roblox in a private/incognito window.
+
+Do not place actual secret values in project files.

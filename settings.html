@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Manage AeroDex site appearance and cursor settings." />
+    <meta content="index, follow" name="robots" />
+    <title>Settings | AeroDex Games</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-brand-group">
+        <a class="Logo brand-logo" href="home.html">
+          <img alt="AeroDex Games logo" class="brand-logo__image" src="logo-header.png" />
+          <span class="brand-logo__text">AeroDex Games</span>
+        </a>
+        <a class="discord-header-link" href="https://discord.gg/aZhaHf3cyU" target="_blank" rel="noopener noreferrer" aria-label="Join AeroDex Games on Discord" title="Join AeroDex Games on Discord">
+          <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" />
+        </a>
+      </div>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="Games.html">Games</a>
+        <a href="Shop.html">Store</a>
+        <a href="contacts.html">Contact</a>
+        <a href="sitemap.html">Site Index</a>
+      </nav>
+    </header>
+
+    <main class="customizer-page">
+      <section class="customizer-shell">
+        <h1>Settings</h1>
+        <p>Personalize the look and feel of AeroDex on this device.</p>
+            <section class="customizer-section">
+            <h2>Customizer</h2>
+            <p>Adjust the appearance of the site to your liking.</p>
+            </section>
+
+        <section class="site-theme-section" aria-labelledby="site-theme-heading">
+          <div class="theme-section-heading">
+            <div>
+              <h2 id="site-theme-heading">Site Appearance</h2>
+              <p>Choose a palette for every page.</p>
+            </div>
+            <span class="theme-current" data-theme-current aria-live="polite">Midnight Tokyo</span>
+          </div>
+
+          <div class="theme-setting theme-mode-setting">
+            <label for="siteThemeSelect">Basic theme mode</label>
+            <select id="siteThemeSelect" data-theme-select>
+              <option value="custom" disabled>Custom preset selected</option>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+
+          <div class="theme-choice-grid" aria-label="Theme presets">
+            <button class="theme-choice theme-choice--tokyo" type="button" data-theme-preset="midnight-tokyo" aria-pressed="false">
+              <span class="theme-choice__scene" aria-hidden="true"><span></span></span>
+              <span class="theme-choice__copy"><strong>Midnight Tokyo</strong><small>Neon rain · deep ink</small></span>
+            </button>
+            <button class="theme-choice theme-choice--beach" type="button" data-theme-preset="sunrise-beach" aria-pressed="false">
+              <span class="theme-choice__scene" aria-hidden="true"><span></span></span>
+              <span class="theme-choice__copy"><strong>Sunrise Beach</strong><small>Warm sky · coral glass</small></span>
+            </button>
+            <button class="theme-choice theme-choice--dusk" type="button" data-theme-preset="violet-dusk" aria-pressed="false">
+              <span class="theme-choice__scene" aria-hidden="true"><span></span></span>
+              <span class="theme-choice__copy"><strong>Violet Dusk</strong><small>Amethyst · afterglow</small></span>
+            </button>
+            <button class="theme-choice theme-choice--forest" type="button" data-theme-preset="forest-mist" aria-pressed="false">
+              <span class="theme-choice__scene" aria-hidden="true"><span></span></span>
+              <span class="theme-choice__copy"><strong>Forest Mist</strong><small>Canopy · mint light</small></span>
+            </button>
+          </div>
+
+          <div class="theme-custom-row">
+            <label for="siteAccentColor"><span>Accent color</span><small>Personalize links and highlights</small></label>
+            <input id="siteAccentColor" type="color" value="#7fe9ff" aria-label="Choose a custom accent color" />
+            <button class="theme-reset" id="resetSiteTheme" type="button">Reset theme</button>
+          </div>
+        </section>
+
+        <h2 id="cursor-appearance-heading">Cursor Appearance</h2>
+        <div class="customizer-preview">
+          <div class="cursor-preview-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="customizer-controls">
+          <label class="toggle-row" for="cursorEnabledToggle">
+            <span>Enable floating cursor</span>
+            <span class="switch">
+              <input id="cursorEnabledToggle" type="checkbox" checked />
+              <span class="slider"></span>
+            </span>
+          </label>
+
+          <div class="color-picker-wrap">
+            <label for="cursorColorPicker">Pick a color</label>
+            <input id="cursorColorPicker" type="color" value="#7fe9ff" />
+          </div>
+
+          <div class="brightness-wrap">
+            <label for="cursorBrightness">Cursor brightness</label>
+            <input id="cursorBrightness" type="range" min="20" max="100" value="100" />
+            <span id="cursorBrightnessValue">100%</span>
+          </div>
+
+          <div class="customizer-actions">
+            <button class="btn" id="applyCursorSettings" type="button">Apply</button>
+            <button class="btn btn-secondary" id="resetCursorColor" type="button">Reset</button>
+          </div>
+
+          <div class="customizer-status" id="cursorStatus" aria-live="polite"></div>
+        </div>
+
+        <section class="settings-updates-section" id="settings-updates" aria-labelledby="settings-updates-heading">
+          <h2 id="settings-updates-heading">Updates</h2>
+          <p>Release notes, new features, and site changes.</p>
+          <a class="btn settings-updates-link" href="updates.html?from=settings">View all updates</a>
+        </section>
+      </section>
+    </main>
+
+    <button class="settings-quick-trigger" id="settingsQuickTrigger" type="button" aria-label="Open settings menu" aria-controls="settingsQuickMenu" aria-expanded="false">
+      <span class="settings-quick-arrow" aria-hidden="true"></span>
+    </button>
+    <button class="settings-quick-backdrop" id="settingsQuickBackdrop" type="button" aria-label="Close settings menu" tabindex="-1"></button>
+    <aside class="settings-quick-menu" id="settingsQuickMenu" aria-label="Quick settings navigation" aria-hidden="true" inert>
+      <div class="settings-quick-menu__heading">
+        <h2>Settings</h2>
+      </div>
+      <nav aria-label="Settings and site navigation">
+        <a href="#site-theme-heading">Site appearance</a>
+        <a href="#siteThemeSelect">Theme mode</a>
+        <a href="#siteAccentColor">Accent color</a>
+        <a href="#cursor-appearance-heading">Cursor appearance</a>
+        <a href="#cursorBrightness">Cursor brightness</a>
+        <a href="#settings-updates">Updates</a>
+      </nav>
+    </aside>
+
+    <script src="script.js"></script>
+    <script>
+      const picker = document.getElementById('cursorColorPicker');
+      const status = document.getElementById('cursorStatus');
+      const applyButton = document.getElementById('applyCursorSettings');
+      const resetButton = document.getElementById('resetCursorColor');
+      const toggle = document.getElementById('cursorEnabledToggle');
+      const brightnessSlider = document.getElementById('cursorBrightness');
+      const brightnessValue = document.getElementById('cursorBrightnessValue');
+      const swatches = document.querySelectorAll('.swatch');
+      const siteAccentInput = document.getElementById('siteAccentColor');
+
+      const persistThemeAccent = (colorValue) => {
+        const normalized = /^#[0-9a-fA-F]{3,6}$/.test(colorValue || '') ? colorValue : '#7fe9ff';
+        try {
+          localStorage.setItem('aerodexThemeAccent', normalized);
+        } catch (err) {
+        }
+        if (typeof window.applyThemeAccent === 'function') {
+          window.applyThemeAccent(normalized);
+        }
+      };
+
+      if (siteAccentInput) {
+        const activeThemeAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+        const savedAccent = localStorage.getItem('aerodexThemeAccent') || activeThemeAccent || '#7fe9ff';
+        siteAccentInput.value = /^#[0-9a-fA-F]{3,6}$/.test(savedAccent) ? savedAccent : '#7fe9ff';
+        siteAccentInput.addEventListener('input', (event) => {
+          persistThemeAccent(event.target.value);
+        });
+      }
+
+      const getBrightnessLevel = () => {
+        const stored = localStorage.getItem('aerodexCursorBrightness');
+        if (stored === null) return 100;
+        const saved = Number(stored);
+        if (!Number.isFinite(saved)) return 100;
+        return Math.min(100, Math.max(20, saved));
+      };
+
+      const setStatus = (message) => {
+        if (status) status.textContent = message;
+      };
+
+      const getGlowAlpha = (brightnessValuePercent = getBrightnessLevel()) => {
+        const ratio = Math.max(0.2, brightnessValuePercent / 100);
+        return {
+          core: 0.55 * ratio,
+          inner: 0.28 * ratio,
+        };
+      };
+
+      const hexToRgba = (hex, alpha) => {
+        const clean = (hex || '#7fe9ff').replace('#', '');
+        const normalized = clean.length === 3 ? clean.split('').map((char) => char + char).join('') : clean;
+        const bigint = parseInt(normalized, 16);
+        const r = (bigint >> 16) & 255;
+        const g = (bigint >> 8) & 255;
+        const b = bigint & 255;
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      };
+
+      const applyCursorGlowSettings = (colorValue, isEnabled = true, brightnessPercent = getBrightnessLevel()) => {
+        const fallback = '#7fe9ff';
+        const safeColor = /^#[0-9a-fA-F]{3,6}$/.test(colorValue || '') ? colorValue : fallback;
+        const glowAlpha = getGlowAlpha(brightnessPercent);
+        document.documentElement.style.setProperty('--cursor-glow-color', hexToRgba(safeColor, glowAlpha.core));
+        document.documentElement.style.setProperty('--cursor-glow-inner', hexToRgba(safeColor, glowAlpha.inner));
+        const preview = document.querySelector('.cursor-preview-glow');
+        if (preview) {
+          preview.style.background = `radial-gradient(circle, ${hexToRgba(safeColor, glowAlpha.core)}, ${hexToRgba(safeColor, glowAlpha.inner)} 35%, transparent 70%)`;
+          preview.style.opacity = isEnabled ? '1' : '0.18';
+          preview.style.filter = isEnabled ? 'none' : 'grayscale(1)';
+        }
+        try {
+          localStorage.setItem('aerodexCursorColor', safeColor);
+          localStorage.setItem('aerodexCursorEnabled', String(!!isEnabled));
+          localStorage.setItem('aerodexCursorBrightness', String(brightnessPercent));
+        } catch (err) {
+        }
+        return safeColor;
+      };
+
+      window.applyCursorGlowSettings = applyCursorGlowSettings;
+
+      const setPreview = (color, enabled = true, brightnessPercent = getBrightnessLevel()) => {
+        if (!picker) return;
+        picker.value = color;
+        const glowAlpha = getGlowAlpha(brightnessPercent);
+        const root = document.documentElement;
+        root.style.setProperty('--cursor-glow-color', hexToRgba(color, glowAlpha.core));
+        root.style.setProperty('--cursor-glow-inner', hexToRgba(color, glowAlpha.inner));
+        const preview = document.querySelector('.cursor-preview-glow');
+        if (preview) {
+          preview.style.background = `radial-gradient(circle, ${hexToRgba(color, glowAlpha.core)}, ${hexToRgba(color, glowAlpha.inner)} 35%, transparent 70%)`;
+          preview.style.opacity = enabled ? '1' : '0.18';
+          preview.style.filter = enabled ? 'none' : 'grayscale(1)';
+        }
+      };
+
+      const savedColor = localStorage.getItem('aerodexCursorColor') || '#7fe9ff';
+      const savedEnabled = localStorage.getItem('aerodexCursorEnabled') !== 'false';
+      const savedBrightness = getBrightnessLevel();
+      if (toggle) toggle.checked = savedEnabled;
+      if (brightnessSlider) {
+        brightnessSlider.value = String(savedBrightness);
+        if (brightnessValue) brightnessValue.textContent = `${savedBrightness}%`;
+      }
+      setPreview(savedColor, savedEnabled, savedBrightness);
+
+      if (toggle) {
+        toggle.addEventListener('change', () => {
+          const isEnabled = toggle.checked;
+          const brightnessPercent = brightnessSlider ? Number(brightnessSlider.value) : getBrightnessLevel();
+          setPreview(picker.value, isEnabled, brightnessPercent);
+          applyCursorGlowSettings(picker.value, isEnabled, brightnessPercent);
+          setStatus(isEnabled ? 'Floating cursor enabled.' : 'Floating cursor disabled.');
+        });
+      }
+
+      if (brightnessSlider) {
+        brightnessSlider.addEventListener('input', (event) => {
+          const value = Number(event.target.value);
+          if (brightnessValue) brightnessValue.textContent = `${value}%`;
+          setPreview(picker.value, toggle ? toggle.checked : true, value);
+          applyCursorGlowSettings(picker.value, toggle ? toggle.checked : true, value);
+        });
+      }
+
+      picker.addEventListener('input', (event) => {
+        const brightnessPercent = brightnessSlider ? Number(brightnessSlider.value) : getBrightnessLevel();
+        setPreview(event.target.value, toggle ? toggle.checked : true, brightnessPercent);
+      });
+
+      swatches.forEach((swatch) => {
+        swatch.addEventListener('click', () => {
+          const color = swatch.dataset.color;
+          setPreview(color, toggle ? toggle.checked : true);
+          setStatus('Preset color selected.');
+        });
+      });
+
+      applyButton.addEventListener('click', () => {
+        const selected = picker.value;
+        const isEnabled = toggle ? toggle.checked : true;
+        const brightnessPercent = brightnessSlider ? Number(brightnessSlider.value) : getBrightnessLevel();
+        localStorage.setItem('aerodexCursorColor', selected);
+        localStorage.setItem('aerodexCursorEnabled', String(isEnabled));
+        localStorage.setItem('aerodexCursorBrightness', String(brightnessPercent));
+        applyCursorGlowSettings(selected, isEnabled, brightnessPercent);
+        setStatus(isEnabled ? 'Cursor glow settings saved.' : 'Cursor glow settings saved and floating cursor disabled.');
+      });
+
+      resetButton.addEventListener('click', () => {
+        localStorage.removeItem('aerodexCursorColor');
+        localStorage.setItem('aerodexCursorEnabled', 'true');
+        localStorage.setItem('aerodexCursorBrightness', '100');
+        if (toggle) toggle.checked = true;
+        if (brightnessSlider) {
+          brightnessSlider.value = '100';
+          if (brightnessValue) brightnessValue.textContent = '100%';
+        }
+        const defaultColor = '#7fe9ff';
+        setPreview(defaultColor, true, 100);
+        applyCursorGlowSettings(defaultColor, true, 100);
+        setStatus('Cursor glow reset to default brightness and enabled.');
+      });
+
+      const quickMenu = document.getElementById('settingsQuickMenu');
+      const quickTrigger = document.getElementById('settingsQuickTrigger');
+      const quickBackdrop = document.getElementById('settingsQuickBackdrop');
+      const quickLinks = quickMenu.querySelectorAll('a[href^="#"]');
+      let pointerEnteredQuickMenu = false;
+
+      const setQuickMenuOpen = (isOpen, focusMenu = false, returnFocus = false) => {
+        quickMenu.classList.toggle('is-open', isOpen);
+        quickMenu.setAttribute('aria-hidden', String(!isOpen));
+        quickMenu.inert = !isOpen;
+        quickTrigger.setAttribute('aria-expanded', String(isOpen));
+        quickTrigger.setAttribute('aria-label', isOpen ? 'Close settings menu' : 'Open settings menu');
+        quickTrigger.classList.toggle('is-open', isOpen);
+        quickBackdrop.classList.toggle('is-visible', isOpen);
+        if (!isOpen) pointerEnteredQuickMenu = false;
+        if (isOpen && focusMenu) quickLinks[0]?.focus();
+        if (!isOpen && returnFocus) quickTrigger.focus();
+      };
+
+      quickTrigger.addEventListener('click', () => {
+        const isOpen = quickMenu.classList.contains('is-open');
+        setQuickMenuOpen(!isOpen, !isOpen, isOpen);
+      });
+      quickBackdrop.addEventListener('click', () => setQuickMenuOpen(false, false, true));
+      quickLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const target = document.querySelector(link.hash);
+          if (!target) return;
+          window.history.pushState(null, '', link.hash);
+          setQuickMenuOpen(false);
+          target.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start',
+          });
+        });
+      });
+
+      quickMenu.addEventListener('pointermove', (event) => {
+        if (event.pointerType === 'mouse' && quickMenu.classList.contains('is-open')) {
+          pointerEnteredQuickMenu = true;
+        }
+      });
+      quickMenu.addEventListener('pointerleave', (event) => {
+        if (event.pointerType !== 'mouse' || !pointerEnteredQuickMenu) return;
+        pointerEnteredQuickMenu = false;
+        setQuickMenuOpen(false);
+      });
+
+      let swipeStart = null;
+      document.addEventListener('touchstart', (event) => {
+        if (event.target.closest('a, button, input, select, textarea, [role="button"]')) {
+          swipeStart = null;
+          return;
+        }
+        const touch = event.changedTouches[0];
+        swipeStart = { x: touch.clientX, y: touch.clientY };
+      }, { passive: true });
+
+      document.addEventListener('touchend', (event) => {
+        if (!swipeStart) return;
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - swipeStart.x;
+        const deltaY = Math.abs(touch.clientY - swipeStart.y);
+        swipeStart = null;
+        if (deltaX > 64 && deltaY < 80) setQuickMenuOpen(true);
+      }, { passive: true });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && quickMenu.classList.contains('is-open')) {
+          setQuickMenuOpen(false, false, true);
+        }
+      });
+    </script>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <h3>AeroDex Games</h3>
+        <p>Engineering immersive Roblox experiences.</p>
+      </div>
+      <div class="footer-links">
+        <a href="contacts.html">Contact</a>
+      </div>
+      <p class="footer-copy">2026 AeroDex Games. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

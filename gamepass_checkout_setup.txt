@@ -1,0 +1,13 @@
+AeroDex Official Roblox Checkout Setup
+
+1. Open gamepass-config.js.
+2. For each product, paste the numeric Roblox Game Pass ID into passId.
+3. Example:
+   "the-bmw-bundle": { title: "The BMW Bundle", robux: 480, passId: "123456789" }
+4. Deploy the updated project to Netlify.
+5. Test every Buy on Roblox button in a private browser window.
+
+Important:
+- Do not add credit-card fields to this website.
+- Purchases are completed on Roblox using Robux.
+- A blank passId intentionally shows “Game Pass ID is not configured yet.”

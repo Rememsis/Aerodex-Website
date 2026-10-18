@@ -1,0 +1,25 @@
+AeroDex Roblox OAuth Review Checklist
+
+Before resubmitting to Roblox:
+1. Deploy this ZIP to Netlify.
+2. In Netlify, set environment variables:
+   ROBLOX_CLIENT_ID
+   ROBLOX_CLIENT_SECRET
+   SESSION_SECRET
+   ROBLOX_REDIRECT_URI=<configured in Netlify Environment Variables>
+3. In Roblox OAuth app settings, set:
+   Entry Link: https://aerodexofficial.netlify.app/
+   Privacy Policy URL: Configure a valid external policy URL before review; the site policy page was removed.
+   Terms of Service URL: Configure a valid external terms URL before review; the site terms page was removed.
+   Redirect URL: <must exactly match ROBLOX_REDIRECT_URI in Netlify>
+4. Add scopes:
+   openid
+   profile
+5. Test these pages before review:
+   https://aerodexofficial.netlify.app/
+   https://aerodexofficial.netlify.app/login.html
+   https://aerodexofficial.netlify.app/roblox-auth.html
+   https://aerodexofficial.netlify.app/Gamepass.html
+6. Click Login with Roblox and verify it returns to /profile.html signed in.
+
+Important: do not resubmit if any page shows Page Not Found, an infinite loader, or OAuth error.

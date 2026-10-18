@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="A history of updates to the AeroDex Games website."
+      name="description"
+    />
+    <link
+      href="https://aerodexofficial.netlify.app/updates.html"
+      rel="canonical"
+    />
+    <title>Updates | AeroDex Games</title>
+    <link href="site.webmanifest" rel="manifest" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-brand-group">
+        <a class="Logo brand-logo" href="home.html">
+          <img alt="AeroDex Games logo" class="brand-logo__image" src="logo-header.png" />
+          <span class="brand-logo__text">AeroDex Games</span>
+        </a>
+        <a class="discord-header-link" href="https://discord.gg/aZhaHf3cyU" target="_blank" rel="noopener noreferrer" aria-label="Join AeroDex Games on Discord" title="Join AeroDex Games on Discord">
+          <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" />
+        </a>
+      </div>
+      <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="Games.html">Games</a>
+        <a href="Store.html">Store</a>
+        <a href="settings.html">Settings</a>
+        <a href="contacts.html">Contact</a>
+        <a href="sitemap.html">Site Index</a>
+      </nav>
+    </header>
+    <main class="updates-page">
+      <h1 class="welcome">Updates</h1>
+      <a class="btn back-button updates-settings-back" id="settingsReturnLink" href="settings.html#settings-updates" hidden>Back to Settings</a>
+      <section class="sometext update-log" aria-labelledby="update-log-heading" id="update-log">
+        <h2 id="update-log-heading">Update Log</h2>
+        <article class="update-log-entry">
+          <time datetime="2026-10-17">October 17, 2026 - Version 2.3.0</time>
+          <ul>
+            <li></li>
+          <time datetime="2026-10-10">October 10, 2026 - Version 2.2.0</time>
+          <ul>
+            <li>Added New Themes: Midnight Tokyo, Sunrise Beach, Violet Dusk, and Forest Mist theme presets, plus Light, Dark, and System modes.</li>
+            <li>Added custom accent colors and theme-matched buttons, links, form controls, slideshow dots, navigation progress, and scrollbar styling.</li>
+            <li>Moved theme controls to the Customize page and removed the duplicate floating theme panel.</li>
+            <li>Added a smoother page loader, entrance and scroll reveals, refined hover transitions, and subtle ambient motion, with reduced-motion support.</li>
+            <li>Linked the footer version label to the Updates page and expanded the log with rewritten release history and a service notice.</li>
+            <li>Fixed styling conflicts that suppressed animations or kept interactive elements from matching the selected theme.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-10-05">October 5, 2026 - Version 2.1.0</time>
+          <ul>
+            <li>Added Light, Dark, and System appearance modes and the Update Log.</li>
+            <li>Improved contact-page navigation, refined the mobile navigation, and made slideshow images 30% transparent.</li>
+            <li>Added an introduction animation, improved motion quality, fixed empty boxes on the Customize page, and updated the 404 page to match the site design.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-10-03">October 3, 2026 - Version 2.0.0</time>
+          <ul>
+            <li>Introduced a redesigned Graphite Surface interface and a more functional mobile layout.</li>
+            <li>Added parallax and hover effects, plus an animated scroll-progress indicator in the navigation.</li>
+            <li>Improved sliders, buttons, and transitions; fixed navigation overlap and mobile layout issues.</li>
+            <li>Standardized slideshow images to a 16:9 aspect ratio and removed account policy and document pages.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-09-19">September 19, 2026 - Version 1.2</time>
+          <ul>
+            <li>Added a cursor-glow customizer, expanded the site's animations, and announced a new game in development.</li>
+            <li>Updated social and game information and removed the unused login feature.</li>
+            <li>Fixed the Site Index grid and duplicate back buttons, refreshed the slideshow and visual assets, and improved mobile navigation.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-08-05">August 5, 2026 - Service Notice</time>
+          <ul>
+            <li>Roblox authentication issues temporarily affected the website. Maintenance timing changed while the OAuth setup was being restored.</li>
+            <li>The site reopened with a known issue: Roblox sign-in could still fail.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-08-03">August 3, 2026 - Version 1.1.1</time>
+          <ul>
+            <li>Added a FAQ page and improved the site for mobile devices.</li>
+            <li>Fixed issues involving special characters and animations, and refined visual effects and transitions.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-08-02">August 2, 2026 - Version 1.1</time>
+          <ul>
+            <li>Added a Site Index for easier navigation, a cursor-following glow, and a new store item.</li>
+            <li>Updated game and contact information, banners, and links; fixed multiple bugs.</li>
+            <li>Smoothed scrolling animations, refreshed selected assets, and redesigned the 404 page.</li>
+          </ul>
+        </article>
+        <article class="update-log-entry">
+          <time datetime="2026-07-18">July 18, 2026 - Version 1.0</time>
+          <ul>
+            <li>Released the first version of the AeroDex Games website.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+      if (new URLSearchParams(window.location.search).get('from') === 'settings') {
+        document.getElementById('settingsReturnLink').hidden = false;
+      }
+    </script>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <h3>AeroDex Games</h3>
+        <p>Engineering immersive Roblox experiences.</p>
+      </div>
+      <div class="footer-links">
+        <a href="contacts.html">Contact</a>
+        <a href="sitemap.html">Site Index</a>
+      </div>
+      <p class="footer-copy">© 2026 AeroDex Games. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

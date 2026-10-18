@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The requested AeroDex Games page could not be found."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#061018" />
+    <title>404 — Page Not Found | AeroDex Games</title>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      body.not-found-page {
+        --not-found-panel: rgba(7, 16, 24, 0.76);
+        --not-found-line: rgba(223, 239, 245, 0.2);
+        min-height: 100svh;
+        background-color: var(--bg);
+      }
+
+      .header-brand-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .discord-header-link img {
+        display: block;
+        width: 19px;
+        height: 19px;
+        flex: 0 0 19px;
+      }
+
+      .discord-header-link {
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+        background: rgba(88, 101, 242, 0.16);
+        transition: width 0.22s ease, gap 0.22s ease, padding 0.22s ease, border-radius 0.22s ease, border-color 0.22s ease, background-color 0.22s ease, transform 0.22s ease;
+      }
+
+      .discord-header-link::after {
+        content: "Join!";
+        max-width: 0;
+        overflow: hidden;
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+        opacity: 0;
+        transition: max-width 0.22s ease, opacity 0.16s ease;
+      }
+
+      .discord-header-link:hover,
+      .discord-header-link:focus-visible {
+        width: 84px;
+        gap: 7px;
+        padding: 0 10px;
+        border-color: #8e98ff;
+        border-radius: 18px;
+        background: rgba(88, 101, 242, 0.3);
+        transform: translateY(-1px);
+      }
+
+      .discord-header-link:hover::after,
+      .discord-header-link:focus-visible::after {
+        max-width: 34px;
+        opacity: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .discord-header-link,
+        .discord-header-link::after {
+          transition: none;
+        }
+      }
+
+      html[data-theme="light"] body.not-found-page {
+        --not-found-panel: rgba(248, 250, 247, 0.84);
+        --not-found-line: rgba(22, 48, 54, 0.18);
+      }
+
+      body.not-found-page main.not-found {
+        width: min(900px, calc(100% - 40px));
+        min-height: min(680px, calc(100svh - 150px));
+        margin: 142px auto 40px;
+        padding: clamp(32px, 7vw, 76px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: var(--not-found-panel);
+        border: 1px solid var(--not-found-line);
+        border-radius: 8px;
+      }
+
+      .not-found__eyebrow {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .not-found__eyebrow span {
+        margin: 0 0.45em;
+        color: var(--accent-strong);
+      }
+
+      .not-found__code {
+        margin: 14px 0 2px -0.04em;
+        color: var(--accent);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(6.5rem, 22vw, 13rem);
+        font-weight: 700;
+        line-height: 0.88;
+      }
+
+      .not-found h1 {
+        margin-top: 24px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(1.8rem, 5vw, 3.4rem);
+        line-height: 1.1;
+      }
+
+      .not-found__message {
+        max-width: 540px;
+        margin-top: 14px;
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .not-found__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .not-found__button {
+        min-height: 46px;
+        padding: 0 17px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--not-found-line);
+        border-radius: 4px;
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+        font-size: 0.92rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .not-found__button:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .not-found__button--primary {
+        border-color: var(--accent-strong);
+        background: var(--accent-strong);
+        color: #06201e;
+      }
+
+      .not-found__path {
+        width: 100%;
+        margin-top: 40px;
+        padding-top: 14px;
+        border-top: 1px solid var(--not-found-line);
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+
+      .not-found__path span {
+        margin-left: 8px;
+        color: var(--text);
+        overflow-wrap: anywhere;
+      }
+
+      @media (max-width: 760px) {
+        body.not-found-page main.not-found {
+          min-height: calc(100svh - 130px);
+          margin-top: 118px;
+          padding: 30px 24px;
+        }
+
+        .not-found__actions {
+          align-items: stretch;
+          width: 100%;
+        }
+
+        .not-found__button {
+          flex: 1 1 140px;
+        }
+      }
+    </style>
+    <script>
+      (() => {
+        const themeKey = "aerodexTheme";
+        const systemTheme = window.matchMedia("(prefers-color-scheme: light)");
+        const getPreference = () => {
+          try {
+            const saved = window.localStorage.getItem(themeKey);
+            return ["light", "dark", "system"].includes(saved) ? saved : "system";
+          } catch (error) {
+            return "system";
+          }
+        };
+        const applyTheme = () => {
+          const preference = getPreference();
+          const theme = preference === "system"
+            ? (systemTheme.matches ? "light" : "dark")
+            : preference;
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          const themeColor = document.querySelector('meta[name="theme-color"]');
+          if (themeColor) themeColor.content = theme === "light" ? "#f8faf7" : "#061018";
+        };
+
+        applyTheme();
+        systemTheme.addEventListener("change", () => {
+          if (getPreference() === "system") applyTheme();
+        });
+        window.addEventListener("storage", (event) => {
+          if (event.key === themeKey) applyTheme();
+        });
+      })();
+    </script>
+  </head>
+  <body class="not-found-page">
+    <header>
+      <div class="header-brand-group">
+        <a class="Logo brand-logo" href="index.html"
+          ><img
+            alt="AeroDex Games logo"
+            class="brand-logo__image"
+            src="logo-header.png"
+          /><span class="brand-logo__text">AeroDex Games</span></a
+        >
+        <a
+          class="discord-header-link"
+          href="https://discord.gg/aZhaHf3cyU"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Join AeroDex Games on Discord"
+          title="Join AeroDex Games on Discord"
+        >
+          <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" />
+        </a>
+      </div>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="Games.html">Games</a>
+        <a href="Shop.html">Store</a>
+        <a href="settings.html">Settings</a>
+        <a href="contacts.html">Contact</a>
+        <a href="sitemap.html">Site Index</a>
+      </nav>
+    </header>
+
+    <main class="not-found">
+      <div class="not-found__eyebrow">AeroDex Games <span>/</span> Error</div>
+      <div class="not-found__code" aria-label="Error 404">404</div>
+      <h1>This page is out of range.</h1>
+      <p class="not-found__message">
+        The page may have moved, been removed, or the address may be incorrect.
+      </p>
+
+      <div class="not-found__actions">
+        <a class="not-found__button not-found__button--primary" href="/">Back to home</a>
+        <a class="not-found__button" href="/Games.html">Browse games</a>
+        <button class="not-found__button" type="button" id="go-back">Go back</button>
+      </div>
+
+      <p class="not-found__path">
+        Requested path <span id="requested-path">unknown</span>
+      </p>
+    </main>
+
+    <script>
+      document.getElementById("requested-path").textContent =
+        window.location.pathname;
+
+      document.getElementById("go-back").addEventListener("click", function () {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = "/";
+        }
+      });
+    </script>
+  </body>
+</html>

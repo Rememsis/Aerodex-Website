@@ -1,0 +1,746 @@
+﻿<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Browse AeroDex Games gamepasses, bundles, vehicle packs, and digital products for supported Roblox experiences."
+      name="description"
+    />
+    <meta content="index, follow" name="robots" />
+    <link
+      href="https://aerodexofficial.netlify.app/Gamepass.html"
+      rel="canonical"
+    />
+    <meta content="#061018" name="theme-color" />
+    <meta
+      content="AeroDex Store | Gamepasses and Products"
+      property="og:title"
+    />
+    <meta
+      content="Browse AeroDex Games gamepasses, bundles, vehicle packs, and digital products for supported Roblox experiences."
+      property="og:description"
+    />
+    <meta
+      content="https://aerodexofficial.netlify.app/og-image.jpg"
+      property="og:image"
+    />
+    <meta
+      content="https://aerodexofficial.netlify.app/Gamepass.html"
+      property="og:url"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="AeroDex Store | Gamepasses and Products"
+      name="twitter:title"
+    />
+    <meta
+      content="Browse AeroDex Games gamepasses, bundles, vehicle packs, and digital products for supported Roblox experiences."
+      name="twitter:description"
+    />
+    <meta
+      content="https://aerodexofficial.netlify.app/og-image.jpg"
+      name="twitter:image"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AeroDex Games",
+        "url": "https://aerodexofficial.netlify.app/",
+        "logo": "https://aerodexofficial.netlify.app/aerodex-logo.png",
+        "sameAs": ["https://www.roblox.com/"]
+      }
+    </script>
+    <title>AeroDex Store | Gamepasses and Products</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="site.webmanifest" rel="manifest" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Visibility fix: keeps store cards and checkout content visible even if global reveal/loading CSS fails. */
+      body,
+      main,
+      section,
+      .gamepass-grid-section,
+      .gamepass-grid,
+      .gamepass-card,
+      .gamepass-content,
+      .checkout-panel,
+      .checkout-form,
+      .checkout-summary,
+      .checkout-field,
+      .checkout-actions,
+      .information {
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .gamepass-grid {
+        display: grid !important;
+      }
+
+      .checkout-modal {
+        display: none !important;
+      }
+
+      .checkout-modal.visible {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+    </style>
+    <style>
+      body,
+      main,
+      section,
+      .gamepass-grid-section,
+      .gamepass-grid {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .gamepass-grid {
+        display: grid !important;
+      }
+      .checkout-modal {
+        display: none !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .checkout-modal.visible {
+        display: flex !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div aria-label="Loading AeroDex Games" aria-live="polite" id="page-loader">
+      <div class="loader-card">
+        <img
+          alt=""
+          aria-hidden="true"
+          class="loader-brand-logo"
+          src="logo-loader.png"
+        />
+        <div aria-hidden="true" class="loader-orb-wrap">
+          <span class="loader-orb loader-orb-one"></span>
+          <span class="loader-orb loader-orb-two"></span>
+          <span class="loader-orb loader-orb-three"></span>
+        </div>
+        <p class="loader-kicker">AeroDex Games</p>
+        <h1>Loading Experience</h1>
+        <div aria-hidden="true" class="loader-progress"><span></span></div>
+        <p class="loader-status">Preparing assets...</p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        function hideAeroDexLoader() {
+          var loader = document.getElementById("page-loader");
+          if (!loader) return;
+          loader.classList.add("hidden");
+          loader.classList.add("is-hidden");
+          document.body.classList.add("page-loaded");
+          document.body.classList.remove("page-transitioning");
+          document.body.classList.remove("page-exiting");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(hideAeroDexLoader, 900);
+        });
+        window.addEventListener("load", function () {
+          setTimeout(hideAeroDexLoader, 350);
+        });
+        setTimeout(hideAeroDexLoader, 2400);
+      })();
+    </script>
+    <header>
+      <div class="header-brand-group">
+        <a class="Logo brand-logo" href="index.html"
+          ><img
+            alt="AeroDex Games logo"
+            class="brand-logo__image"
+            src="logo-header.png"
+          /><span class="brand-logo__text">AeroDex Games</span></a
+        >
+        <a class="discord-header-link" href="https://discord.gg/aZhaHf3cyU" target="_blank" rel="noopener noreferrer" aria-label="Join AeroDex Games on Discord" title="Join AeroDex Games on Discord">
+          <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" />
+        </a>
+      </div>
+      <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="CreationsandProducts.html">Games</a>
+        <a href="Gamepass.html">Store</a>
+        <a href="settings.html">Settings</a>
+        <a href="contacts.html">Contact</a>
+        <a href="sitemap.html">Site Index</a>
+      </nav>
+    </header>
+    <main>
+      <div
+        class="welcome-container"
+        style="text-align: center; margin-bottom: 20px; padding-top: 40px"
+      >
+        <!--<h1 class="welcome" style="font-size: 2.5em; margin-bottom: 10px">
+          Products and Gamepasses
+        </h1>
+        <h3 style="font-size: 1.5em; color: #aaa">Explore Our Models</h3>
+        <div
+          aria-live="polite"
+          class="purchase-status"
+          id="purchase-status"
+          role="status"
+        ></div>
+      </div>
+      <section class="gamepass-grid-section">
+        <div class="gamepass-grid">
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Electric Vehicle Bundle</h4>
+              <p>Includes the BYD Han and Xiaomi SU7 electric vehicles.</p>
+              <span class="gamepass-price">320 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-electric-vehicle-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #8f7dff, #2dd4bf)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The BMW Bundle</h4>
+              <p>
+                Includes the BMW 5 series (base model and street race model) and
+                M4s (coupe and convertible).
+              </p>
+              <span class="gamepass-price">480 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-bmw-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #c8ff00, #00ff2a)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Chevy Bundle</h4>
+              <p>Includes the Chevy Caprice, Impala and Lumina models.</p>
+              <span class="gamepass-price">480 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-chevy-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #51cf66, #37b7c3)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Van Bundle</h4>
+              <p>
+                Includes various van models, including the Ford Econliner,
+                Mercedes-Benz Sprinter, and 2 other models.
+              </p>
+              <span class="gamepass-price">800 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-van-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #a370f0, #748bff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Police Force Bundle</h4>
+              <p>Includes 5 police vehicle models with functional sirens.</p>
+              <span class="gamepass-price">800 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-police-force-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #aa5252, #2600ff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Extreme Bundle</h4>
+              <p>
+                Includes the Street Styled BMW 5 series, mountain climbing Chevy
+                Surburban, Street racing Chevy Impala, and the Patriotic Racing
+                Ford Crown Victoria.
+              </p>
+              <span class="gamepass-price">800 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-extreme-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #06aed5, #086788)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Lingguo District Car Bundle</h4>
+              <p>
+                All the vehicles from the Lingguo District game in one bundle.
+              </p>
+              <span class="gamepass-price">1,680 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-lingguo-district-car-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff6b6b, #ffa500)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>The Steamship Bundle</h4>
+              <p>Includes Titanic, Britannic and the Olympic steamships.</p>
+              <span class="gamepass-price">2,480 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="the-steamship-bundle"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="display: flex; justify-content: center; margin: 24px 0">
+        <div class="gamepass-card" style="max-width: 400px; width: 100%">
+          <div
+            class="gamepass-header"
+            style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+          ></div>
+          <div class="gamepass-content">
+            <h4>The Bundle of Cars</h4>
+            <p>
+              Includes Every Car in our collection. (BMW Bundle, Chevy Bundle,
+              etc.)
+            </p>
+            <span class="gamepass-price">12,000 Robux</span>
+            <button
+              class="roblox-purchase-btn btn"
+              data-product-key="the-bundle-of-cars"
+              style="width: 100%; margin-top: 12px"
+              type="button"
+            >
+              Buy on Roblox
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="information" style="text-align: center; margin: 40px 0">
+        <h3 style="font-size: 3em">Individual Models</h3>
+        <p>
+          Explore our extensive 3D model library for designing and creating your
+          own worlds.
+        </p>
+      </div>
+      <section class="gamepass-grid-section">
+        <div class="gamepass-grid">
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #8f7dff, #2dd4bf)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>BMW m4 Coupe</h4>
+              <p>
+                A high-performance sports car model with the base lime yellow
+                color.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="bmw-m4-coupe"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff6b6b, #ffa500)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>BMW m4 Convertible</h4>
+              <p>
+                A high-performance sports car model with the base lime yellow
+                color.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="bmw-m4-convertible"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>BMW 5 series Wagon</h4>
+              <p>A luxury wagon known for its performance and comfort.</p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="bmw-5-series-wagon"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>BMW 5 series</h4>
+              <p>A luxury sedan known for its performance and comfort.</p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="bmw-5-series"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #aa5252, #2600ff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>BYD Han</h4>
+              <p>
+                A modern electric vehicle designed for comfort and efficiency.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="byd-han"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #06aed5, #086788)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Chevy Caprice</h4>
+              <p>
+                A relic used in the police force of NYC of the 1990s. Also used
+                as a taxi.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="chevy-caprice"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #c8ff00, #00ff2a)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Chevy Impala</h4>
+              <p>A relic used in the police force of NYC of the 1990s.</p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="chevy-impala"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ffffff, #000000)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Chevy Lumina</h4>
+              <p>A relic used in the police force of NYC of the 1990s.</p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="chevy-lumina"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Ford Crown Victoria (Taxi)</h4>
+              <p>A relic used in the taxi service of NYC of the 1990s.</p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="ford-crown-victoria-taxi"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #ff00ff, #00ffff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Ford Econliner</h4>
+              <p>
+                A versatile van model suitable for various transportation needs.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="ford-econliner"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #a370f0, #748bff)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Mercedes Sprinter</h4>
+              <p>
+                A high-performance commercial vehicle with 8 seats for easy
+                transportation.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="mercedes-sprinter"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+          <div class="gamepass-card">
+            <div
+              class="gamepass-header"
+              style="background: linear-gradient(135deg, #51cf66, #37b7c3)"
+            ></div>
+            <div class="gamepass-content">
+              <h4>Xiaomi SU7</h4>
+              <p>
+                A high-performance electric sedan with a sleek interior design.
+              </p>
+              <span class="gamepass-price">160 Robux</span>
+              <button
+                class="roblox-purchase-btn btn"
+                data-product-key="xiaomi-su7"
+                style="width: 100%; margin-top: 12px"
+                type="button"
+              >
+                Buy on Roblox
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>-->
+      <div class="information" style="text-align: center; margin: 40px 0">
+        <h3 style="font-size: 3em">Gamepasses</h3>
+        <p>
+          Explore our variety of gamepasses designed to enhance your gaming
+          experience.
+        </p>
+      </div>
+      <div class="gamepass-card gamepass-card--compact">
+        <div
+          class="gamepass-header"
+          style="background: url('Distresscrewps.png'); background-size: cover; background-position: center;"
+        ></div>
+        <div class="gamepass-content">
+          <h4>Crew Gamepass (Distress)</h4>
+          <p>Ability to enter crew areas, control the ship, and set up lifeboats.</p>
+          <span class="gamepass-price">50 Robux</span>
+          <a
+            class="roblox-purchase-btn btn"
+            data-product-key="crew-gamepass"
+            href="https://www.roblox.com/game-pass/1928588298/Crew"
+            rel="noopener noreferrer"
+            style="width: 100%; margin-top: 12px; display: inline-flex; justify-content: center; align-items: center; text-decoration: none;"
+            target="_self"
+          >
+            Buy on Roblox
+          </a>
+        </div>
+      </div>
+
+      <section class="more-content" style="margin-bottom: 40px">
+        <h3 style="text-align: center; margin-bottom: 20px">
+          Why Choose Our Products?
+        </h3>
+        <div class="feature-grid">
+          <div>
+            <h4>High Quality</h4>
+            <p>
+              All our models and assets are created with precision and attention
+              to detail.
+            </p>
+          </div>
+          <div>
+            <h4>Regular Updates</h4>
+            <p>
+              Continuous improvements and new content added regularly for pass
+              holders.
+            </p>
+          </div>
+          <div>
+            <h4>Priority Support</h4>
+            <p>
+              Get dedicated support for all your questions and technical issues.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="information" style="text-align: center; margin-bottom: 60px">
+        <h3>Questions? Contact Us</h3>
+        <a
+          class="btn"
+          href="contacts.html"
+          style="
+            width: 100%;
+            max-width: 200px;
+            margin: 12px auto 0 auto;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            align-items: center;
+          "
+          >Contact Us</a
+        >
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <h3>AeroDex Games</h3>
+        <p>Engineering immersive Roblox experiences.</p>
+      </div>
+      <div class="footer-links">
+        <a href="contacts.html">Contact</a>
+      </div>
+      <p class="footer-copy"> © 2026 AeroDex Games. All rights reserved.</p>
+    </footer>
+    <script src="gamepass-config.js"></script>
+    <script src="gamepass-checkout.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
